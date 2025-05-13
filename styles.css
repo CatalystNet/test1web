@@ -1,0 +1,226 @@
+/* Additional custom styles for SOLIDE landing page */
+
+/* Base styles */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #030712;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(20px) scale(1.05);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.animate-float {
+  animation: float 15s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 18s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(to right, #f472b6, #fb7185);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.5);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.7);
+}
+
+/* Custom button styles */
+.btn-primary {
+  background: linear-gradient(to right, #ec4899, #f43f5e);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #f9a8d4, #fda4af);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(236, 72, 153, 0.5);
+  background-color: rgba(236, 72, 153, 0.1);
+}
+
+/* Card styles */
+.feature-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(236, 72, 153, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.feature-card:hover {
+  border-color: rgba(236, 72, 153, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Code editor styling */
+.code-editor {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.editor-header {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.window-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.window-control {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.control-red {
+  background-color: #ef4444;
+}
+
+.control-yellow {
+  background-color: #eab308;
+}
+
+.control-green {
+  background-color: #22c55e;
+}
+
+.editor-title {
+  flex: 1;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.editor-content {
+  background-color: #030712;
+  padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+
+/* Code syntax highlighting */
+.token-keyword {
+  color: #ec4899;
+}
+
+.token-function {
+  color: #eab308;
+}
+
+.token-string {
+  color: #22c55e;
+}
+
+.token-comment {
+  color: #22c55e;
+}
+
+.token-type {
+  color: #60a5fa;
+}
+
+/* Background grid */
+.bg-grid {
+  background-image: linear-gradient(rgba(236, 72, 153, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(236, 72, 153, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.5);
+}
